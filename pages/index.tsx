@@ -1,6 +1,7 @@
 // Imports
 // ========================================================
 import Head from 'next/head';
+import Link from 'next/link';
 import { Inter } from 'next/font/google';
 import { useEffect, useRef, useState } from 'react';
 import { useAccount, useConnect, useSigner, useProvider, useNetwork, Connector } from 'wagmi';
@@ -240,9 +241,9 @@ export default function Home() {
       </Head>
       <nav>
         <div className="p-4 md:p-8 flex justify-between">
-          <a className="text-[#ffc517] font-[500] bg-[#161618] leading-10 px-6 rounded-full hover:bg-[#0b0b0c] transition-all ease-in-out duration-200" href="/">Web3Uploader</a>
+          <Link className="text-[#ffc517] font-[500] bg-[#161618] leading-10 px-6 rounded-full hover:bg-[#0b0b0c] transition-all ease-in-out duration-200" href="/">Web3Uploader</Link>
 
-          <a href="https://github.com/codingwithmanny/web3uploader" target={'_blank'} referrerPolicy={'no-referrer'} className="text-white font-[500] bg-[#161618] leading-10 px-6 rounded-full hover:bg-[#0b0b0c] transition-all ease-in-out duration-200">GitHub</a>
+          <Link href="https://github.com/codingwithmanny/web3uploader" target={'_blank'} referrerPolicy={'no-referrer'} className="text-white font-[500] bg-[#161618] leading-10 px-6 rounded-full hover:bg-[#0b0b0c] transition-all ease-in-out duration-200">GitHub</Link>
         </div>
       </nav>
       <main className="p-4 md:p-8">
@@ -295,7 +296,7 @@ export default function Home() {
                     </h3>
                     <div className="absolute top-3 right-3 flex">
                       {/* <button className="bg-[#1e1e20] mr-2 text-white mb-4 leading-10 px-6 font-[500] rounded-full hover:scale-105 hover:bg-[#3e3e42] transition-all ease-in-out duration-200">Copy</button> */}
-                      <a href={fileUploadURL} target={'_blank'} className="bg-[#1e1e20] h-10 block text-white mb-4 leading-10 px-6 font-[500] rounded-full hover:scale-105 hover:bg-[#3e3e42] transition-all ease-in-out duration-200">Link</a>
+                      <Link href={fileUploadURL} target={'_blank'} className="bg-[#1e1e20] h-10 block text-white mb-4 leading-10 px-6 font-[500] rounded-full hover:scale-105 hover:bg-[#3e3e42] transition-all ease-in-out duration-200">Link</Link>
                     </div>
                     {/* <button type="button" onClick={() => {
                       setIsUploaded(false);
@@ -326,7 +327,7 @@ export default function Home() {
         }
       </main>
       <footer className="fixed w-full bottom-0 left-0 right-9 bg-black bg-opacity-30 h-14 flex justify-center items-center text-[rgb(126,126,128)]">
-        built by&nbsp;<a className="text-[#cda738] hover:text-[#ffc517] transition-all ease-in-out duration-200" href="https://twitter.com/codingwithmanny" referrerPolicy="no-referrer" target="_blank">@codingwithmanny</a>
+        built by&nbsp;<Link className="text-[#cda738] hover:text-[#ffc517] transition-all ease-in-out duration-200" href="https://twitter.com/codingwithmanny" referrerPolicy="no-referrer" target="_blank">@codingwithmanny</Link>
       </footer>
     </>
   );
